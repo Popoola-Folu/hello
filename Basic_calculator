@@ -1,0 +1,117 @@
+print('HELLO')
+#Help readme file.
+readme=('	Home \"select operation\" prompt: input \"addition\" to add, \"subtraction\" to subtract, \"multiplication\" to multiply, \"division\" to divide and \"exponent\" to perform exponential operations.\n	\"Variable length\" prompt: input the number of variables involved in the operation, operations can only be done with a maximum of 5 variables and not less than two variables.\n	To exit program, input \"exit\" in the select operation prompt.\n 	Thank you.')
+read=input('Open help?(Y/N): ')
+if read==('Y'):
+	print(readme)
+else:
+	print('Initialising.')
+	print('initialising..')
+	print('initialising...')
+	print('	Welcome')
+#Home page.
+def Home():
+	home_selec=(input('Select operation: '))
+	#Addition calculation
+	if home_selec==('addition'):
+		var_len=int(input('number of variables(2-5): '))
+		if var_len == 2:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			ans=(a+b)
+			print(str(a)+('+')+str(b)+(' = ')+str(ans))
+		elif var_len == 3:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			ans=(a+b+c)
+			print(str(a)+('+')+str(b)+('+')+str(c)+(' = ')+str(ans))
+		elif var_len ==4:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			d=float(input('d = '))
+			ans=(a+b+c+d)
+			print(str(a)+('+')+str(b)+('+')+str(c)+('+')+str(d)+(' = ')+str(ans))
+		elif var_len==5:
+			a= float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			d=float(input('d = '))
+			e=float(input('e = '))
+			ans=(a+b+c+d+e)
+			print(str(a)+('+')+str(b)+('+')+str(c)+('+')+str(d)+('+')+str(e)+('=')+str(ans))
+#Subtraction calculation
+	elif home_selec==('subtraction'):
+		var_len=int(input('number of variables(1-5): '))
+		if var_len == 2:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			ans=(a-b)
+			print(str(a)+('-')+str(b)+(' = ')+str(ans))
+		elif var_len == 3:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			ans=(a-b-c)
+			print(str(a)+('-')+str(b)+('-')+str(c)+(' = ')+str(ans))
+		elif var_len ==4:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			d=float(input('d = '))
+			ans=(a-b-c-d)
+			print(str(a)+('-')+str(b)+('-')+str(c)+('-')+str(d)+(' = ')+str(ans))
+		elif var_len==5:
+			a= float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			d=float(input('d = '))
+			e=float(input('e = '))
+			ans=(a-b-c-d-e)
+			print(str(a)+('-')+str(b)+('-')+str(c)+('-')+str(d)+('-')+str(e)+('=')+str(ans))
+#Multiplication calculation
+	elif home_selec==('multiplication'):
+		var_len=int(input('number of variables(1-5): '))
+		if var_len == 2:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			ans=(a*b)
+			print(str(a)+('*')+str(b)+(' = ')+str(ans))
+		elif var_len == 3:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			ans=(a*b*c)
+			print(str(a)+('*')+str(b)+('*')+str(c)+(' = ')+str(ans))
+		elif var_len ==4:
+			a=float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			d=float(input('d = '))
+			ans=(a*b*c*d)
+			print(str(a)+('*')+str(b)+('*')+str(c)+('*')+str(d)+(' = ')+str(ans))
+		elif var_len==5:
+			a= float(input('a = '))
+			b=float(input('b = '))
+			c=float(input('c = '))
+			d=float(input('d = '))
+			e=float(input('e = '))
+			ans=(a*b*c*d*e)
+			print(str(a)+('*')+str(b)+('*')+str(c)+('*')+str(d)+('*')+str(e)+('=')+str(ans))
+#Division calculation
+	elif home_selec==('division'):
+		a=float(input('number = '))
+		b=float(input('divisor = '))
+		ans=(a/b)
+		print(str(a)+('/')+str(b)+( ' = ')+str(ans))
+#Exponential calculation
+	elif home_selec==('exponent'):
+		a=float(input('number = '))
+		b= float(input('power = '))
+		ans=(a**b)
+		print(str(a)+('**')+str(b)+(' = ')+str(ans))
+	elif home_selec==('exit'):
+		exit()
+while True:
+	Home()
